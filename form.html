@@ -6,75 +6,120 @@
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="form.css" />
   </head>
+
   <body>
-    <div class="image-container">
-      <img
-        class="background-image"
-        src="/halie-west-25xggax4bSA-unsplash.jpg"
-        alt="leaves"
-        width="100%"
-      />
-      <div class="logo-container">
+    <div class="main-container">
+      <div class="image-container">
         <img
-          class="logo-image"
-          src="/odin-lined.png"
-          alt="odin-logo"
-          width="50px"
+          class="background-image"
+          src="/halie-west-25xggax4bSA-unsplash.jpg"
+          alt="Photo by Halie West on Unsplash"
+          title="Photo by Halie West on Unsplash"
         />
+        <p class="credits">Photo by <u>Halie West</u> on <u>Unsplash</u></p>
+
+        <div class="logo-container">
+          <img class="logo-image" src="/odin-lined.png" alt="odin-logo" />
+          <p>ODIN</p>
+        </div>
       </div>
-    </div>
 
-    <div class="head-container">
-      <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p>
-      <p>You know you want to.</p>
-    </div>
-
-    <div class="form-section">
-      <div class="main-container">
-        <p>Let's do this!</p>
+      <div class="info-container">
+        <div class="head-container">
+          <p class="firstP">
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams.
+          </p>
+          <p class="secondP">Sign up <em>now</em> to get started.</p>
+          <p class="thirdP">You <em>know</em> you want to.</p>
+        </div>
 
         <div class="form-container">
-          <fieldset>
-            <li>
-              <label for="name">FIRST NAME</label>
-              <input type="text" name="name" id="name" />
-            </li>
+          <p>Let's do this!</p>
+          <form id="myform" action="" method="POST">
+            <ul>
+              <li>
+                <label for="fname">FIRST NAME</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="fname"
+                  required
+                  maxlength="20"
+                  placeholder="George"
+                />
+              </li>
 
-            <li>
-              <label for="e-mail">EMAIL</label>
-              <input type="email" id="e-mail" name="e-mail" />
-            </li>
+              <li>
+                <label for="e-mail">EMAIL</label>
+                <input
+                  type="email"
+                  id="e-mail"
+                  name="e-mail"
+                  required
+                  placeholder="georgejohnson@gmail.com"
+                />
+              </li>
 
-            <li>
-              <label for="pwd">PASSWORD</label>
-              <input type="password" id="pwd" name="pwd" />
-            </li>
-          </fieldset>
+              <li>
+                <label for="pwd">PASSWORD</label>
+                <input type="password" id="pwd" name="pwd" />
+              </li>
+            </ul>
 
-          <fieldset>
-            <li>
-              <label for="name">LAST NAME</label>
-              <input type="text" name="name" id="name" />
-            </li>
+            <ul>
+              <li>
+                <label for="lname">LAST NAME</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="lname"
+                  required
+                  maxlength="20"
+                  placeholder="Johnson"
+                />
+              </li>
 
-            <li>
-              <label for="phone">PHONE NUMBER</label>
-              <input type="tel" id="phone" name="phone" />
-            </li>
+              <li>
+                <label for="phone">PHONE NUMBER</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="6937495493"
+                  minlength="10"
+                  maxlength="10"
+                />
+              </li>
 
-            <li>
-              <label for="pwd">CONFIRM PASSWORD</label>
-              <input type="password" id="pwd" name="pwd" />
-            </li>
-          </fieldset>
+              <li>
+                <label for="conpwd">CONFIRM PASSWORD</label>
+                <input
+                  type="password"
+                  id="conpwd"
+                  name="pwd"
+                  minlength="8"
+                />
+              </li>
+            </ul>
+          </form>
         </div>
-      </div>
-      <div class="bottom-container">
-        <button type="submit">Create Account</button>
-        <div class="log-in-container">
-          <p>Already have an account? <button type="submit">Log in</button></p>
+
+        <div class="bottom-container">
+          <button class="submitBtn" type="submit" form="myform">
+            Create Account
+          </button>
+          <p>
+            Already have an account?
+            <a
+              href="https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form"
+              ><button class="logInBtn">Log in</button></a
+            >
+          </p>
         </div>
       </div>
     </div>
+
+    <script src="form.js"></script>
   </body>
 </html>
