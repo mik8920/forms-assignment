@@ -15,8 +15,6 @@ const verifyPassword = (e) => {
     conpassInput.setCustomValidity("");
     e.preventDefault();
   }
-  /*   conpassInput.reportValidity();
-   */
 };
 
 myform.addEventListener("submit", verifyPassword);
